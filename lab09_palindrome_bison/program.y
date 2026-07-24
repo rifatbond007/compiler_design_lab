@@ -1,12 +1,8 @@
 /*
  * Lab 09 - Bison palindrome checker.
  *
- * For each non-empty line submitted by the user, the program
- * checks whether the input is a palindrome (reads the same forward
- * and backward). The result is printed as either "Palindrome" or
- * "Not Palindrome".
- *
- * Input ends when the user presses ENTER on an empty line.
+ * For each non-empty line, prints "Palindrome" or "Not Palindrome".
+ * Press ENTER on an empty line to finish.
  *
  * Author: riftbond007
  */
@@ -16,12 +12,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
-extern int  yylex(void);
-extern int  yyparse(void);
-extern FILE *yyin;
-extern void  yyerror(const char *s);
+extern int yylex(void);
+extern int yyparse(void);
+extern void yyerror(const char *s);
 
 static int is_palindrome(const char *s);
 %}
@@ -41,21 +35,12 @@ input
 
 line
     : STRING '\n'    {
-                        if (is_palindrome($1)) {
-                            printf("Palindrome\n");
-                        } else {
-                            printf("Not Palindrome\n");
-                        }
-                        fflush(stdout);
+                        if (is_palindrome($1)) printf("Palindrome\n");
+                        else                   printf("Not Palindrome\n");
                         free($1);
                     }
-    | '\n'            {
-                        /* Empty line: end interactive input. */
-                        YYACCEPT;
-                    }
-    | error '\n'      {
-                        yyerrok;
-                    }
+    | '\n'            { YYACCEPT; }
+    | error '\n'      { yyerrok; }
     ;
 
 %%
@@ -66,26 +51,15 @@ static int is_palindrome(const char *s)
     size_t len = strlen(s);
     if (len == 0) return 1;
     for (size_t i = 0, j = len - 1; i < j; i++, j--) {
-        if (s[i] != s[j]) {
-            return 0;
-        }
+        if (s[i] != s[j]) return 0;
     }
     return 1;
 }
 
 int main(void)
 {
-    printf("=========================================\n");
-    printf(" Lab 09 - Bison Palindrome Checker\n");
-    printf("=========================================\n");
-    printf("Type a word or phrase line by line.\n");
-    printf("Press ENTER on an empty line to finish.\n");
-    printf("-----------------------------------------\n");
-    fflush(stdout);
-
+    printf("Type a word or phrase; press ENTER on an empty line to finish.\n");
     yyparse();
-
-    printf("=========================================\n");
     return EXIT_SUCCESS;
 }
 

@@ -1,21 +1,8 @@
-=========================================
- Lab 10 - Lex + Yacc Calculator
-=========================================
-Type arithmetic expressions line by line.
-Press ENTER on an empty line to finish.
------------------------------------------
-2 + 3 * 4
-(2 + 3) * 4
-10 / 2 - 1
--5 + 2
-10 / 0
-2 + * 3
-
------------------------------------------
+$ printf '2 + 3 * 4\n(2 + 3) * 4\n10 / 2 - 1\n-5 + 2\n10 / 0\n2 + * 3\n\n' | ./run.sh
+Type arithmetic expressions; press ENTER on an empty line to finish.
   = 14
   = 20
   = 4
   = -3
   -> Error: division by zero
   -> Invalid Expression
-=========================================

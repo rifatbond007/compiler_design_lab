@@ -1,19 +1,5 @@
-=========================================
- Lab 07 - Flex Comment Checker
-=========================================
-Type your C-like source code line by line.
-Each ENTER classifies the line just typed.
-Press ENTER on an empty line to finish.
------------------------------------------
-int a = 5;
-// this is a single line comment
-int b = 10;
-/* block comment
-   continues here
-   ends here */
-int c = 20;
-
------------------------------------------
+$ printf 'int a = 5;\n// this is a single line comment\nint b = 10;\n/* block comment\n   continues here\n   ends here */\nint c = 20;\n\n' | ./run.sh
+Type C-like source code line by line; press ENTER on an empty line to finish.
 Not a comment
 Single-line comment
 Not a comment
@@ -21,12 +7,7 @@ Block comment
 Block comment
 Block comment
 Not a comment
-=========================================
- Lab 07 - Flex Comment Checker
-=========================================
 Single-line comments : 1
 Block comments       : 3
 Not comments         : 3
------------------------------------------
 Total lines          : 7
-=========================================

@@ -2,16 +2,8 @@
  * Lab 08 - Bison expression validator.
  *
  * Parses arithmetic expressions and reports whether each one is
- * valid. Each line after the user presses ENTER is reported as
- * either "Valid Expression" or "Invalid Expression".
- *
- * Supported tokens:
- *   - numbers       (integer or floating-point)
- *   - identifiers   (alphanumeric, starting with letter or underscore)
- *   - operators     + - * /
- *   - parentheses   ( )
- *
- * Input ends when the user presses ENTER on an empty line.
+ * valid. Each line is reported as "Valid Expression" or
+ * "Invalid Expression". Press ENTER on an empty line to finish.
  *
  * Author: riftbond007
  */
@@ -22,11 +14,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-extern int  yylex(void);
-extern int  yyparse(void);
+extern int yylex(void);
+extern int yyparse(void);
 extern char *yytext;
-extern FILE *yyin;
-extern void  yyerror(const char *s);
+extern void yyerror(const char *s);
 
 static int parse_error = 0;
 %}
@@ -51,19 +42,12 @@ input
 
 line
     : expr '\n'      {
-                        if (!parse_error) {
-                            printf("Valid Expression\n");
-                            fflush(stdout);
-                        }
+                        if (!parse_error) printf("Valid Expression\n");
                         parse_error = 0;
                     }
-    | '\n'            {
-                        /* Empty line: end interactive input. */
-                        YYACCEPT;
-                    }
+    | '\n'            { YYACCEPT; }
     | error '\n'      {
                         printf("Invalid Expression\n");
-                        fflush(stdout);
                         yyerrok;
                         parse_error = 0;
                     }
@@ -92,17 +76,8 @@ factor
 
 int main(void)
 {
-    printf("=========================================\n");
-    printf(" Lab 08 - Bison Expression Validator\n");
-    printf("=========================================\n");
-    printf("Type arithmetic expressions line by line.\n");
-    printf("Press ENTER on an empty line to finish.\n");
-    printf("-----------------------------------------\n");
-    fflush(stdout);
-
+    printf("Type arithmetic expressions; press ENTER on an empty line to finish.\n");
     yyparse();
-
-    printf("=========================================\n");
     return EXIT_SUCCESS;
 }
 

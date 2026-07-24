@@ -1,10 +1,6 @@
 /*
  * Lab 09 - Flex scanner for the palindrome checker.
  *
- * Captures each input line as a STRING token (without the trailing
- * newline) and returns it. Newlines are returned as a literal '\n'
- * so the parser can use them to detect line boundaries.
- *
  * Author: riftbond007
  */
 
@@ -18,12 +14,10 @@
 
 %%
 
-[ \t]+         { /* ignore leading whitespace */ }
+[ \t]+         { }
 \n             { return '\n'; }
 
 [^\n]+         {
-                    /* Capture everything up to (but not including) the
-                     * newline as the line string. Trim leading whitespace. */
                     char *p = yytext;
                     while (*p == ' ' || *p == '\t') p++;
                     yylval.sval = strdup(p);

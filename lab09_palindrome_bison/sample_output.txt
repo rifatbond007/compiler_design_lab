@@ -1,19 +1,7 @@
-=========================================
- Lab 09 - Bison Palindrome Checker
-=========================================
-Type a word or phrase line by line.
-Press ENTER on an empty line to finish.
------------------------------------------
-madam
-hello
-racecar
-hello world
-12321
-
------------------------------------------
+$ printf 'madam\nhello\nracecar\nhello world\n12321\n\n' | ./run.sh
+Type a word or phrase; press ENTER on an empty line to finish.
 Palindrome
 Not Palindrome
 Palindrome
 Not Palindrome
 Palindrome
-=========================================

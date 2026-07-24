@@ -1,18 +1,5 @@
-=========================================
- Lab 02 - Character / Word / Line Counter
-=========================================
-Type your text line by line.
-Press ENTER on an empty line to finish.
------------------------------------------
-Hello world
-This is line two
-Line three here
+$ printf 'Hello world\nThis is a test\n\n' | ./run.sh
+Lines: 2  Words: 6  Characters: 25
 
------------------------------------------
-=========================================
- Lab 02 - Character / Word / Line Counter
-=========================================
-Characters   : 42
-Words        : 9
-Lines        : 3
-=========================================
+$ printf '\n' | ./run.sh
+Lines: 0  Words: 0  Characters: 0

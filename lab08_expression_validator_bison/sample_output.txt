@@ -1,19 +1,7 @@
-=========================================
- Lab 08 - Bison Expression Validator
-=========================================
-Type arithmetic expressions line by line.
-Press ENTER on an empty line to finish.
------------------------------------------
-a + b * 2
-(a + b) * 2
-3.14 * r * r
-(x + y
-2 + + 3
-
------------------------------------------
+$ printf 'a + b * 2\n(a + b) * 2\n3.14 * r * r\n(x + y\n2 + + 3\n\n' | ./run.sh
+Type arithmetic expressions; press ENTER on an empty line to finish.
 Valid Expression
 Valid Expression
 Valid Expression
 Invalid Expression
 Invalid Expression
-=========================================

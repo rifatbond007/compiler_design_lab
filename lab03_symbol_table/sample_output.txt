@@ -1,39 +1,18 @@
-=========================================
- Lab 03 - Symbol Table Generator
-=========================================
-Type your C-like source code line by line.
-Press ENTER on an empty line to finish.
------------------------------------------
-int main() {
-    int a = 10;
-    float b = 3.14;
-    char c = 'x';
-    int sum;
-    sum = a + b;
-    return 0;
-}
-
------------------------------------------
-=========================================
- Lab 03 - Symbol Table Generator
-=========================================
-Lines read : 8
-=========================================
-+----+----------------------+----------+--------------+
-| No | Identifier           | Type     | Category     |
-+----+----------------------+----------+--------------+
-| 1  | int                  | int      | Keyword      |
-| 2  | main                 | int      | Identifier   |
-| 3  | a                    | int      | Identifier   |
-| 4  | 10                   | literal  | Number       |
-| 5  | float                | float    | Keyword      |
-| 6  | b                    | float    | Identifier   |
-| 7  | 3.14                 | literal  | Number       |
-| 8  | char                 | char     | Keyword      |
-| 9  | c                    | char     | Identifier   |
-| 10 | sum                  | int      | Identifier   |
-| 11 | return               | -        | Keyword      |
-| 12 | 0                    | literal  | Number       |
-+----+----------------------+----------+--------------+
+$ printf 'int main() {\n    int a = 10;\n    float b = 3.14;\n    char c = x;\n    int sum;\n    sum = a + b;\n    return 0;\n}\n\n' | ./run.sh
+Type C-like source code; press ENTER on an empty line to finish.
+Lines read: 8
+No  Identifier             Type       Category
+-----------------------------------------------
+1   int                   int        Keyword
+2   main                  int        Identifier
+3   a                     int        Identifier
+4   10                    literal    Number
+5   float                 float      Keyword
+6   b                     float      Identifier
+7   3.14                  literal    Number
+8   char                  char       Keyword
+9   c                     char       Identifier
+10  sum                   int        Identifier
+11  return                -          Keyword
+12  0                     literal    Number
 Total entries: 12
-=========================================
