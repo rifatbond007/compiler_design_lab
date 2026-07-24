@@ -5,6 +5,8 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
+LAB_DIR="Lab"
+
 LABS=(
     "lab01_validate|Check Identifier"
     "lab02_count|Character Word Line Counter"
@@ -42,13 +44,14 @@ while true; do
     fi
 
     IFS='|' read -r folder _ <<<"${LABS[$((choice - 1))]}"
-    if [[ ! -x "$folder/run.sh" ]]; then
-        echo "Error: $folder/run.sh not found or not executable."
+    target="$LAB_DIR/$folder"
+    if [[ ! -x "$target/run.sh" ]]; then
+        echo "Error: $target/run.sh not found or not executable."
         continue
     fi
 
     echo
-    echo "--- Running $folder ---"
-    ( cd "$folder" && ./run.sh )
-    echo "--- $folder finished ---"
+    echo "--- Running $target ---"
+    ( cd "$target" && ./run.sh )
+    echo "--- $target finished ---"
 done

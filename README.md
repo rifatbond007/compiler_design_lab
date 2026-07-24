@@ -67,16 +67,17 @@ compiler_design_lab/
 ├── install.sh                 # cross-platform dependency installer
 ├── run.sh                     # top-level menu for all labs
 │
-├── lab01_validate/            # identifier validation (C)
-├── lab02_count/               # character/word/line counter (C)
-├── lab03_symbol/              # symbol table generator (C)
-├── lab04_tokens/              # token counter (C)
-├── lab05_words/               # flex word counter
-├── lab06_classify/            # flex token classifier
-├── lab07_comments/            # flex comment checker
-├── lab08_expr/                # bison expression validator
-├── lab09_palindrome/          # bison palindrome checker
-└── lab10_calc/                # lex + yacc calculator
+└── Lab/
+    ├── lab01_validate/        # identifier validation (C)
+    ├── lab02_count/           # character/word/line counter (C)
+    ├── lab03_symbol/          # symbol table generator (C)
+    ├── lab04_tokens/          # token counter (C)
+    ├── lab05_words/           # flex word counter
+    ├── lab06_classify/        # flex token classifier
+    ├── lab07_comments/        # flex comment checker
+    ├── lab08_expr/            # bison expression validator
+    ├── lab09_palindrome/      # bison palindrome checker
+    └── lab10_calc/            # lex + yacc calculator
 ```
 
 Each lab folder contains:
@@ -230,7 +231,7 @@ Displays a numbered menu. Pick a lab number, the script enters that folder, runs
 ### Run a Lab Independently
 
 ```bash
-cd lab05_words
+cd Lab/lab05_words
 ./run.sh
 ```
 
@@ -239,7 +240,7 @@ Each `run.sh` follows the same three-step pattern: compile, run, clean up genera
 To build a lab and run it with custom input via stdin:
 
 ```bash
-printf 'hello world\n\n' | ./lab05_words/run.sh
+printf 'hello world\n\n' | ./Lab/lab05_words/run.sh
 ```
 
 ---
