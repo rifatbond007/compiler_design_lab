@@ -1,0 +1,32 @@
+=========================================
+ Lab 07 - Flex Comment Checker
+=========================================
+Type your C-like source code line by line.
+Each ENTER classifies the line just typed.
+Press ENTER on an empty line to finish.
+-----------------------------------------
+int a = 5;
+// this is a single line comment
+int b = 10;
+/* block comment
+   continues here
+   ends here */
+int c = 20;
+
+-----------------------------------------
+Not a comment
+Single-line comment
+Not a comment
+Block comment
+Block comment
+Block comment
+Not a comment
+=========================================
+ Lab 07 - Flex Comment Checker
+=========================================
+Single-line comments : 1
+Block comments       : 3
+Not comments         : 3
+-----------------------------------------
+Total lines          : 7
+=========================================
