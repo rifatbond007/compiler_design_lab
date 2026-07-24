@@ -1,0 +1,65 @@
+=========================================
+ Lab 06 - Flex Token Classifier
+=========================================
+Type your C-like source code line by line.
+Press ENTER on an empty line to finish.
+-----------------------------------------
+int main() {
+    int a = 10;
+    float b = 3.14;
+    char c = 'x';
+    int sum;
+    sum = a + b;
+    return 0;
+}
+
+-----------------------------------------
+Token classification:
+  int              -> Keyword
+  main             -> Identifier
+  (                -> Separator
+  )                -> Separator
+  {                -> Separator
+  int              -> Keyword
+  a                -> Identifier
+  =                -> Operator
+  10               -> Number
+  ;                -> Separator
+  float            -> Keyword
+  b                -> Identifier
+  =                -> Operator
+  3.14             -> Number
+  ;                -> Separator
+  char             -> Keyword
+  c                -> Identifier
+  =                -> Operator
+  'x'              -> Character
+  ;                -> Separator
+  int              -> Keyword
+  sum              -> Identifier
+  ;                -> Separator
+  sum              -> Identifier
+  =                -> Operator
+  a                -> Identifier
+  +                -> Operator
+  b                -> Identifier
+  ;                -> Separator
+  return           -> Keyword
+  0                -> Number
+  ;                -> Separator
+  }                -> Separator
+=========================================
+ Lab 06 - Flex Token Classifier
+=========================================
+Summary of token categories:
+-----------------------------------------
+  Keywords    : 6
+  Identifiers : 8
+  Numbers     : 3
+  Operators   : 5
+  Separators  : 10
+  Strings     : 0
+  Characters  : 1
+-----------------------------------------
+  TOTAL       : 33
+=========================================
