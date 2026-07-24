@@ -1,0 +1,18 @@
+=========================================
+ Lab 02 - Character / Word / Line Counter
+=========================================
+Type your text line by line.
+Press ENTER on an empty line to finish.
+-----------------------------------------
+Hello world
+This is line two
+Line three here
+
+-----------------------------------------
+=========================================
+ Lab 02 - Character / Word / Line Counter
+=========================================
+Characters   : 42
+Words        : 9
+Lines        : 3
+=========================================
