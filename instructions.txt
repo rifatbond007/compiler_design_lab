@@ -1,0 +1,562 @@
+# ROLE
+
+You are a Senior Compiler Design Lab Instructor, Linux System Programmer, and Compiler Engineer.
+
+Your task is to build a COMPLETE Ubuntu-based Compiler Design Laboratory Project using C, Flex (Lex), Bison (Yacc), GCC, and Bash.
+
+The project must be ready for university lab submission.
+
+Everything must compile and execute correctly on Ubuntu Linux.
+
+Do NOT skip any files.
+
+Do NOT use deprecated syntax.
+
+Every program must be fully tested before generating.
+
+---
+
+# OPERATING SYSTEM
+
+Ubuntu Linux 22.04+
+Ubuntu Linux 24.04
+Ubuntu Linux 25.10
+
+---
+
+# REQUIRED SOFTWARE
+
+GCC
+Flex
+Bison
+Make
+Bash
+
+---
+
+# PROJECT NAME
+
+Compiler-Design-Lab
+
+---
+
+# PROJECT STRUCTURE
+
+Compiler-Design-Lab/
+
+│
+├── README.md
+├── install.sh
+├── run.sh
+├── Makefile
+│
+├── lab01_identifier_validation/
+├── lab02_character_word_line_counter/
+├── lab03_symbol_table/
+├── lab04_token_counter/
+├── lab05_word_counter_flex/
+├── lab06_token_classifier_flex/
+├── lab07_comment_checker_flex/
+├── lab08_expression_validator_bison/
+├── lab09_palindrome_bison/
+└── lab10_simple_calculator/
+
+Each folder must contain
+
+source files
+
+sample input
+
+sample output
+
+README
+
+run.sh
+
+Makefile (if needed)
+
+No shared source files.
+
+Everything must be independent.
+
+---
+
+# MAIN MENU
+
+Create a root run.sh.
+
+When executed
+
+./run.sh
+
+Display
+
+=========================================
+Compiler Design Laboratory
+=========================================
+
+1. Check Identifier
+2. Character Word Line Counter
+3. Generate Symbol Table
+4. Count Tokens
+5. Flex Word Counter
+6. Flex Token Classifier
+7. Flex Comment Checker
+8. Bison Expression Validator
+9. Bison Palindrome Checker
+10. Lex + Yacc Calculator
+
+0. Exit
+
+Enter Choice:
+
+When user selects an option
+
+Automatically enter that folder
+
+Execute run.sh
+
+Return to main menu after completion
+
+Repeat until Exit.
+
+---
+
+# ALSO SUPPORT
+
+Every lab must also run independently.
+
+Example
+
+cd lab05_word_counter_flex
+
+./run.sh
+
+must work.
+
+---
+
+# INSTALL SCRIPT
+
+Create install.sh
+
+Install
+
+sudo apt update
+
+sudo apt install gcc -y
+
+sudo apt install flex -y
+
+sudo apt install bison -y
+
+sudo apt install make -y
+
+Automatically verify installation.
+
+---
+
+# LAB LIST
+
+## LAB 01
+
+Write a C program to check whether the given identifier is valid or not.
+
+Requirements
+
+Accept identifier from keyboard.
+
+Validate according to C language rules.
+
+Display
+
+Valid Identifier
+
+or
+
+Invalid Identifier
+
+---
+
+## LAB 02
+
+Write a C program to count
+
+Characters
+
+Words
+
+Lines
+
+from a text file.
+
+Display all three counts.
+
+---
+
+## LAB 03
+
+Write a C program to generate a Symbol Table.
+
+Recognize
+
+Identifiers
+
+Datatype
+
+Keyword
+
+Memory Address (simulated)
+
+Store everything in table format.
+
+---
+
+## LAB 04
+
+Write a C program to count the total number of tokens in a C source program.
+
+Count
+
+Keywords
+
+Identifiers
+
+Operators
+
+Constants
+
+Separators
+
+Display total tokens.
+
+---
+
+## LAB 05
+
+Write a Flex program to count total number of words in an input file.
+
+Input
+
+input.txt
+
+Output
+
+Total Words
+
+---
+
+## LAB 06
+
+Write a Flex program to classify tokens.
+
+Recognize
+
+Keywords
+
+Identifiers
+
+Numbers
+
+Operators
+
+Separators
+
+String literals
+
+Character literals
+
+Print token type.
+
+Display summary count.
+
+---
+
+## LAB 07
+
+Write a Flex program to check whether a given line is a comment.
+
+Support
+
+//
+
+/* */
+
+Output
+
+Comment
+
+Not Comment
+
+---
+
+## LAB 08
+
+Write a Bison program to validate arithmetic expressions.
+
+Use
+
+Flex
+
+Bison
+
+Support
+
++
+
+-
+
+*
+
+/
+
+()
+
+Numbers
+
+Identifiers
+
+Output
+
+Valid Expression
+
+Invalid Expression
+
+---
+
+## LAB 09
+
+Write a Bison program to recognize whether a string is palindrome.
+
+Input
+
+madam
+
+Output
+
+Palindrome
+
+Input
+
+hello
+
+Output
+
+Not Palindrome
+
+---
+
+## LAB 10
+
+Implement a Simple Calculator using Lex and Yacc.
+
+Support
+
+Addition
+
+Subtraction
+
+Multiplication
+
+Division
+
+Parentheses
+
+Multiple operations
+
+Correct operator precedence.
+
+Display calculated result.
+
+Gracefully handle syntax errors.
+
+---
+
+# EVERY LAB MUST INCLUDE
+
+Algorithm
+
+Theory
+
+Source Code
+
+Comments
+
+Compilation Commands
+
+Execution Commands
+
+Sample Input
+
+Sample Output
+
+Explanation
+
+Time Complexity
+
+Space Complexity
+
+Observation
+
+Conclusion
+
+README.md
+
+run.sh
+
+Makefile (if needed)
+
+---
+
+# BASH SCRIPT
+
+Every run.sh must
+
+Compile automatically
+
+Generate required files
+
+Execute program
+
+Remove temporary files
+
+Display colored messages
+
+Example
+
+Compiling...
+
+Running...
+
+Completed Successfully
+
+---
+
+# ROOT README
+
+Include
+
+Project Overview
+
+Folder Structure
+
+Requirements
+
+Installation
+
+Compilation
+
+Execution
+
+Screenshots Section
+
+Lab List
+
+Author
+
+License
+
+---
+
+# CODE STYLE
+
+Professional
+
+Readable
+
+Fully Commented
+
+Modular
+
+Beginner Friendly
+
+No unnecessary code.
+
+---
+
+# ERROR HANDLING
+
+Invalid Input
+
+Missing Input File
+
+Compilation Error
+
+Wrong Expression
+
+Unexpected Characters
+
+Runtime Errors
+
+Handle all cases.
+
+---
+
+# TERMINAL OUTPUT
+
+Green
+
+Success
+
+Yellow
+
+Warning
+
+Red
+
+Error
+
+---
+
+# FINAL OUTPUT FORMAT
+
+Generate the ENTIRE project.
+
+Never summarize.
+
+Generate every file one by one.
+
+Example
+
+====================================================
+File: lab05_word_counter_flex/program.l
+====================================================
+
+<complete source code>
+
+Then continue with
+
+run.sh
+
+README.md
+
+input.txt
+
+and all remaining files.
+
+Never omit files.
+
+Never say
+
+"same as previous"
+
+Never shorten code.
+
+Continue until the COMPLETE project is finished.
+
+If the response limit is reached
+
+Stop only after finishing the current file.
+
+In the next response continue from the exact next file.
+
+Never regenerate previous files.
+
+The final project must work after executing only
+
+chmod +x install.sh
+chmod +x run.sh
+
+./install.sh
+
+./run.sh

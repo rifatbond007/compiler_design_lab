@@ -1,0 +1,46 @@
+# ============================================================
+# .gitignore for Compiler Design Lab
+# ============================================================
+# Ignore generated build artifacts and OS clutter.
+# Each lab's run.sh cleans up its own generated files at runtime,
+# but this file protects against accidental commits.
+
+# --- Compiled binaries ---
+program
+*.o
+*.obj
+*.exe
+a.out
+*.out
+
+# --- Lex / Flex generated files ---
+lex.yy.c
+*.yy.c
+
+# --- Yacc / Bison generated files ---
+y.tab.c
+y.tab.h
+*.tab.c
+*.tab.h
+
+# --- Object / dependency files ---
+*.d
+*.gcno
+*.gcda
+
+# --- Backup / swap files ---
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# --- Editor / IDE files ---
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# --- OS-specific ---
+.directory

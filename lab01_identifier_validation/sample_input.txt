@@ -1,0 +1,10 @@
+valid_identifier
+123abc
+if
+_sum
+_my_var2
+my-var
+hello world
+a
+_total$cost
+return

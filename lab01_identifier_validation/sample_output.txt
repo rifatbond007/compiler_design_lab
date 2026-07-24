@@ -1,0 +1,59 @@
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: valid_identifier
+[OK] "valid_identifier" is a VALID C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: 123abc
+[FAIL] "123abc" is NOT a valid C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: if
+[FAIL] "if" is NOT a valid C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: _sum
+[OK] "_sum" is a VALID C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: _my_var2
+[OK] "_my_var2" is a VALID C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: my-var
+[FAIL] "my-var" is NOT a valid C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: hello world
+[ERROR] Identifier must not contain whitespace.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: a
+[OK] "a" is a VALID C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: _total$cost
+[FAIL] "_total$cost" is NOT a valid C identifier.
+
+=========================================
+ Lab 01 - C Identifier Validator
+=========================================
+Enter an identifier: return
+[FAIL] "return" is NOT a valid C identifier.
