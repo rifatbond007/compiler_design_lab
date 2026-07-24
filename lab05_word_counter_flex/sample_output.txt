@@ -1,0 +1,15 @@
+=========================================
+ Lab 05 - Flex Word Counter
+=========================================
+Type text line by line.
+Press ENTER on an empty line to finish.
+-----------------------------------------
+The quick brown fox jumps
+over the lazy dog 123
+flex is fun
+
+=========================================
+ Lab 05 - Flex Word Counter
+=========================================
+Total Words : 13
+=========================================
